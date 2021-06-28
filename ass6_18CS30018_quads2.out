@@ -1,0 +1,227 @@
+++++++++++++++++++++++++++++++++
+|        Parser results        |
+++++++++++++++++++++++++++++++++
+=>  NO ERRORS!Successfully Parsed!  
+
+++++++++++++++++++++++++++++++++
+|      TAC code Generation     |
+++++++++++++++++++++++++++++++++
+
+main: 
+
+	   1:	t00 = 13
+	   2:	a = t00
+	   3:	t01 = 30
+	   4:	b = t01
+	   5:	t02 = 22
+	   6:	c = t02
+	   7:	t03 = 2
+	   8:	d = t03
+	   9:	t04 = 2
+	  10:	incr = t04
+	  11:	param t05
+	  12:	t06 = call printStr, 1
+	  13:	param t07
+	  14:	t08 = call printStr, 1
+	  15:	param a
+	  16:	t09 = call printInt, 1
+	  17:	param t10
+	  18:	t11 = call printStr, 1
+	  19:	param b
+	  20:	t12 = call printInt, 1
+	  21:	param t13
+	  22:	t14 = call printStr, 1
+	  23:	param c
+	  24:	t15 = call printInt, 1
+	  25:	param t16
+	  26:	t17 = call printStr, 1
+	  27:	param d
+	  28:	t18 = call printInt, 1
+	  29:	param t19
+	  30:	t20 = call printStr, 1
+	  31:	param incr
+	  32:	t21 = call printInt, 1
+	  33:	if b >= a goto 42
+	  34:	goto 59
+	  35:	goto 73
+	  36:	if c >= d goto 45
+	  37:	goto 52
+	  38:	goto 58
+	  39:	t22 = incr + c
+	  40:	incr = t22
+	  41:	t24 = incr + b
+	  42:	incr = t24
+	  43:	t26 = b + c
+	  44:	d = t26
+	  45:	goto 73
+	  46:	t28 = incr + d
+	  47:	incr = t28
+	  48:	t30 = incr + b
+	  49:	incr = t30
+	  50:	t32 = b - d
+	  51:	a = t32
+	  52:	goto 73
+	  53:	if c >= d goto 62
+	  54:	goto 69
+	  55:	goto 73
+	  56:	t34 = incr + c
+	  57:	incr = t34
+	  58:	t36 = incr + a
+	  59:	incr = t36
+	  60:	t38 = a + b
+	  61:	c = t38
+	  62:	goto 73
+	  63:	t40 = incr + d
+	  64:	incr = t40
+	  65:	t42 = incr + a
+	  66:	incr = t42
+	  67:	param t44
+	  68:	t45 = call printStr, 1
+	  69:	param t46
+	  70:	t47 = call printStr, 1
+	  71:	param a
+	  72:	t48 = call printInt, 1
+	  73:	param t49
+	  74:	t50 = call printStr, 1
+	  75:	param b
+	  76:	t51 = call printInt, 1
+	  77:	param t52
+	  78:	t53 = call printStr, 1
+	  79:	param c
+	  80:	t54 = call printInt, 1
+	  81:	param t55
+	  82:	t56 = call printStr, 1
+	  83:	param d
+	  84:	t57 = call printInt, 1
+	  85:	param t58
+	  86:	t59 = call printStr, 1
+	  87:	param incr
+	  88:	t60 = call printInt, 1
+	  89:	param t61
+	  90:	t62 = call printStr, 1
+	  91:	t63 = 0
+	  92:	return t63
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+++++++++++++++++++++++++++++++++++++++++
+|  Symbol Tables Used for the Program  |
+++++++++++++++++++++++++++++++++++++++++
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ST . Global()                                                                                              Parent: null
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+NAME      | TYPE                | CATEGORY  | INITIAL VALUE                           | SIZE      | OFFSET    | NESTED TABLE
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+printStr  | int                 | function  |                                         | 0         | 0         | printStr
+printInt  | int                 | function  |                                         | 0         | 0         | printInt
+readInt   | int                 | function  |                                         | 0         | 0         | readInt
+main      | int                 | function  |                                         | 0         | 0         | main
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ST . printStr()                                                                                            Parent: Global
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+NAME      | TYPE                | CATEGORY  | INITIAL VALUE                           | SIZE      | OFFSET    | NESTED TABLE
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+c         | char*               | param     |                                         | 4         | 4         | null
+return    | int                 | local     |                                         | 4         | 0         | null
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ST . printInt()                                                                                            Parent: Global
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+NAME      | TYPE                | CATEGORY  | INITIAL VALUE                           | SIZE      | OFFSET    | NESTED TABLE
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+i         | int                 | param     |                                         | 4         | 4         | null
+return    | int                 | local     |                                         | 4         | 0         | null
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ST . readInt()                                                                                             Parent: Global
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+NAME      | TYPE                | CATEGORY  | INITIAL VALUE                           | SIZE      | OFFSET    | NESTED TABLE
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+eP        | int*                | param     |                                         | 4         | 4         | null
+return    | int                 | local     |                                         | 4         | 0         | null
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ST . main()                                                                                                Parent: Global
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+NAME      | TYPE                | CATEGORY  | INITIAL VALUE                           | SIZE      | OFFSET    | NESTED TABLE
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+return    | int                 | local     |                                         | 4         | 0         | null
+a         | int                 | local     | 13                                      | 4         | -4        | null
+t00       | int                 | temp      | 13                                      | 4         | -8        | null
+b         | int                 | local     | 30                                      | 4         | -12       | null
+t01       | int                 | temp      | 30                                      | 4         | -16       | null
+c         | int                 | local     | 22                                      | 4         | -20       | null
+t02       | int                 | temp      | 22                                      | 4         | -24       | null
+d         | int                 | local     | 2                                       | 4         | -28       | null
+t03       | int                 | temp      | 2                                       | 4         | -32       | null
+incr      | int                 | local     | 2                                       | 4         | -36       | null
+t04       | int                 | temp      | 2                                       | 4         | -40       | null
+printStr  | int                 | local     |                                         | 4         | -44       | null
+t05       | char*               | temp      | "\n++++ Before changes +++++\n"         | 4         | -48       | null
+t06       | int                 | temp      |                                         | 4         | -52       | null
+t07       | char*               | temp      | "\t a = "                               | 4         | -56       | null
+t08       | int                 | temp      |                                         | 4         | -60       | null
+printInt  | int                 | local     |                                         | 4         | -64       | null
+t09       | int                 | temp      |                                         | 4         | -68       | null
+t10       | char*               | temp      | "\t b = "                               | 4         | -72       | null
+t11       | int                 | temp      |                                         | 4         | -76       | null
+t12       | int                 | temp      |                                         | 4         | -80       | null
+t13       | char*               | temp      | "\t c = "                               | 4         | -84       | null
+t14       | int                 | temp      |                                         | 4         | -88       | null
+t15       | int                 | temp      |                                         | 4         | -92       | null
+t16       | char*               | temp      | "\t d = "                               | 4         | -96       | null
+t17       | int                 | temp      |                                         | 4         | -100      | null
+t18       | int                 | temp      |                                         | 4         | -104      | null
+t19       | char*               | temp      | "\t incr = "                            | 4         | -108      | null
+t20       | int                 | temp      |                                         | 4         | -112      | null
+t21       | int                 | temp      |                                         | 4         | -116      | null
+t22       | int                 | temp      |                                         | 4         | -120      | null
+t23       | int                 | temp      |                                         | 4         | -124      | null
+t24       | int                 | temp      |                                         | 4         | -128      | null
+t25       | int                 | temp      |                                         | 4         | -132      | null
+t26       | int                 | temp      |                                         | 4         | -136      | null
+t27       | int                 | temp      |                                         | 4         | -140      | null
+t28       | int                 | temp      |                                         | 4         | -144      | null
+t29       | int                 | temp      |                                         | 4         | -148      | null
+t30       | int                 | temp      |                                         | 4         | -152      | null
+t31       | int                 | temp      |                                         | 4         | -156      | null
+t32       | int                 | temp      |                                         | 4         | -160      | null
+t33       | int                 | temp      |                                         | 4         | -164      | null
+t34       | int                 | temp      |                                         | 4         | -168      | null
+t35       | int                 | temp      |                                         | 4         | -172      | null
+t36       | int                 | temp      |                                         | 4         | -176      | null
+t37       | int                 | temp      |                                         | 4         | -180      | null
+t38       | int                 | temp      |                                         | 4         | -184      | null
+t39       | int                 | temp      |                                         | 4         | -188      | null
+t40       | int                 | temp      |                                         | 4         | -192      | null
+t41       | int                 | temp      |                                         | 4         | -196      | null
+t42       | int                 | temp      |                                         | 4         | -200      | null
+t43       | int                 | temp      |                                         | 4         | -204      | null
+t44       | char*               | temp      | "\n++++ After changes +++++\n"          | 4         | -208      | null
+t45       | int                 | temp      |                                         | 4         | -212      | null
+t46       | char*               | temp      | "\t a = "                               | 4         | -216      | null
+t47       | int                 | temp      |                                         | 4         | -220      | null
+t48       | int                 | temp      |                                         | 4         | -224      | null
+t49       | char*               | temp      | "\t b = "                               | 4         | -228      | null
+t50       | int                 | temp      |                                         | 4         | -232      | null
+t51       | int                 | temp      |                                         | 4         | -236      | null
+t52       | char*               | temp      | "\t c = "                               | 4         | -240      | null
+t53       | int                 | temp      |                                         | 4         | -244      | null
+t54       | int                 | temp      |                                         | 4         | -248      | null
+t55       | char*               | temp      | "\t d = "                               | 4         | -252      | null
+t56       | int                 | temp      |                                         | 4         | -256      | null
+t57       | int                 | temp      |                                         | 4         | -260      | null
+t58       | char*               | temp      | "\t incr = "                            | 4         | -264      | null
+t59       | int                 | temp      |                                         | 4         | -268      | null
+t60       | int                 | temp      |                                         | 4         | -272      | null
+t61       | char*               | temp      | "\n"                                    | 4         | -276      | null
+t62       | int                 | temp      |                                         | 4         | -280      | null
+t63       | int                 | temp      | 0                                       | 4         | -284      | null
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
